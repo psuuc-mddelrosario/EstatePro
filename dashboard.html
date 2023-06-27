@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EstatePro</title>
+  <link rel="icon" href="logo.png">
+  <!-- Bootstrap CSS link -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  
+</head>
+
+<style>
+  .search-form {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .search-form .form-control {
+      margin-right: 10px;
+    }
+</style>
+
+<body>
+
+    <!--nav-->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="logo.png" alt="Logo" width="50">
+            <span class="text-warning">Estate</span>Pro
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="dashboard.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="properties.html">Properties</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="reservationlist.html">Appointment</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="sell.html">Sell</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="agents.html">Agents</a>
+              </li>
+              <li class="nav-item">
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                  <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+                </form>
+              </li>
+              
+              <li class="nav-item">
+                <div class="dropdown text-end">
+                  <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="userr.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                  </a>
+                  <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                    <li><a class="dropdown-item" href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="userr.png" width="32" height="32" class="rounded-circle"><a href="profile.html" class=""> <center>Marie Del Rosario</center>  </a></a></li> 
+                   <li><hr class="dropdown-divider"></li>
+                    <li> <img src="" alt=""> <a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="index.html">Log out</a></li>
+                  </ul>
+                </div>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+
+      <!--hero section-->
+      <section class="hero">
+        <div class="container">
+          <h1>Welcome to <span class="text-warning">Estate</span>Pro!</a></h1>
+          <p>Find your dream property today!</p>
+    
+         <!-- Search Section -->
+         <section class="search-section">
+          <div class="container">
+            <div class="form-row align-items-end">
+              <div class="col-md-4">
+                <label for="propertyType"></label>
+                <select id="propertyType" name="propertyType" class="form-control">
+                  <option value="select">Property Type</option>
+                  <option value="house">House</option>
+                  <option value="apartment">Apartment</option>
+                  <option value="condo">Condo</option>
+                  <option value="land">Land</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label for="city"></label>
+                <select id="city" name="city" class="form-control">
+                  <option value="all city">All City</option>
+                  <option value="Quezon">Quezon</option>
+                  <option value="Baguio">Baguio</option>
+                  <option value="Tugegarao">Tugegarao</option>
+                  <option value="Makati">Makati</option>
+                </select>
+              </div>
+              <div class="col-md-4 text-md-right">
+                <button class="btn btn-primary btn-block" onclick="search()">Search</button>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
+</section>
+      
+
+  <!--INFO-->
+  <div class="b-example-divider"></div>
+
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="highlight-2.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Best place to live in Tagaytay?</h1>
+        <p class="lead">Find spaces where you can pause and play. Right at the heart of infrastructure boom and growth areas, there's a places where you can own well-built homes at affordable
+            rate with convinient payment options. It's a place where you and your loved ones can grow and thrive at your own paces.
+        </p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a href="#" class="btn btn-warning">View Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <!--Featured Properties-->
+
+  <section class="featured-properties">
+    <div class="container">
+      <h2 class="text-center text-white" style=" margin-top: 30px; margin-bottom: 50px;"> Featured Properties </h2>
+      <hr>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card property-card">
+            <img src="f1.jpg" alt="Property 1">
+            <div class="card-body">
+              <h4 class="text-white">The Arton by Rockwell</h4>
+              <p class="text-white">A community designed to inspire curious minds nestled in an vibrat neghborhood in Katipunan, Quezon City.</p>
+              <a href="#" class="btn btn-warning">View Details</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card property-card">
+            <img src="f2.png" alt="Property 2">
+            <div class="card-body">
+              <h4 class="text-white">East Bay Residences</h4>
+              <p class="text-white mb-4">Delivering the community, security, and exclusivity in Muntinlupa City.</p>
+              <a href="#" class="btn btn-warning">View Details</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card property-card">
+            <img src="f3.jpg" alt="Property 3">
+            <div class="card-body">
+              <h4 class="text-white">The Balmori Suites</h4>
+              <p class="text-white">The latest gem, the Balmori Suites is a once-in-a-lifetime opportunity to be at the heart of where it all started.</p>
+
+              <a href="#" class="btn btn-warning">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--blogs and articles-->
+  <div class="blog">
+  <section class="blogs-articles text-align-center">
+    <div class="container">
+      <h2 style="text-align: center; margin-top: 50px;">Blogs and Articles</h2>
+      <p style="text-align: center;">Read the latest news about EstatePro and find interesting articles on home buying and ownership.</p>
+      <div class="row">
+        <div class="col-md-4 mt-5">
+          <div class="card blog-card ">
+            <img src="blog1.png" alt="Blog 1">
+            <div class="card-body">
+              <h4>Tips for First-time Homebuyers</h4>
+              <p>When embarking on the journey of becoming a first-time homebuyer, there are several essential tips to keep in mind. First and foremost...</p>
+              <p class="author">By EstatePro</p>
+              <a href="#" class="btn btn-warning">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mt-5">
+          <div class="card blog-card">
+            <img src="blog2.jpg" alt="Blog 2">
+            <div class="card-body">
+              <h4>Investing in Real Estate</h4>
+              <p>Investing in real estate can be a smart financial decision, providing potential benefits such as long-term appreciation, rental income, and portfolio diversification. 
+                Here are some tips to consider when ...</p>
+              <p class="author">By EstatePro</p>
+              <a href="#" class="btn btn-warning">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mt-5">
+          <div class="card blog-card">
+            <img src="blog3.jpg" alt="Blog 3">
+            <div class="card-body">
+              <h4>10 Things to Consider when Selling a Property</h4>
+              <p>When selling a property, it's crucial to carefully consider various factors to ensure a smooth and successful transaction. 
+                Here ...</p>
+              <p class="author">By EstatePro</p>
+              <a href="#" class="btn btn-warning">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+  <!--footer-->
+  <div class="b-example-divider "></div>
+
+<div class="footer bg-black">
+
+    <div class="container">
+        <footer class="py-5">
+          <div class="row">
+            <div class="col-6 col-md-2 mb-3">
+              <h5>Links</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-warning">Home</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-warning">Properties</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-warning">Contact</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-warning">Profile</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-warning">About</a></li>
+              </ul>
+            </div>
+      
+            <div class="col-6 col-md-2 mb-3">
+              <h5>Explore Homes</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-warning">House</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-warning">House and Lots</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-warning">Condominium</a></li>
+              </ul>
+            </div>
+      
+            <div class="col-6 col-md-2 mb-3">
+              <h5>FAQs</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-warning">Homebuyer</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-warning">Homeowner</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-warning">Seller</a></li>
+              </ul>
+            </div>
+      
+            <div class="col-md-5 offset-md-1 mb-3">
+              <form>
+                <h5 class="text-warning">Subscribe to our newsletter</h5>
+                <p class="mb-2">Monthly digest of what's new and exciting from us.</p>
+                <div class="d-flex flex-column flex-sm-row w-100 gap-3">
+                  <label for="newsletter1" class="visually-hidden"></label>
+                  <input id="newsletter1" type="text" class="form-control" style="margin-right: 2px;" placeholder="Email address">
+                  <button class="btn btn-primary" type="button">Subscribe</button>
+                </div>
+              </form>
+            </div>
+          </div>
+      
+          <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+            <p class="text-white">&copy; 2023 EstatePro All rights reserved.</p>
+            <div class="ml-auto" >
+                <a href="#" class="text-body-secondary me-3" style="margin-right: 5px;"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-body-secondary me-3" style="margin-right: 5px;"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-body-secondary me-3"style="margin-right: 5px;"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-body-secondary me-3" style="margin-right: 5px;"><i class="fab fa-linkedin"></i></a>
+              </div>
+          </div> 
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <!-- Bootstrap JS scripts -->
+  <script>
+    function search() {
+        var propertyType = document.getElementById("propertyType").value;
+        var city = document.getElementById("city").value;
+        
+        console.log("propertyType:", propertyType);
+        console.log("city:", city);
+        
+        if (propertyType === 'select' || city === 'all city') {
+            alert("Please select both property type and city.");
+            return;
+        }
+        
+        if (propertyType === 'house' && city === 'Quezon') {
+            console.log("Redirecting to house1.html...");
+            window.location.href = 'house1.html';
+
+        }  if (propertyType === 'apartment' || city === 'Makati') {
+            console.log("Redirecting to apartment1.html...");
+            window.location.href = 'Apartment.html';
+        }
+         else if (propertyType === 'condo' && city === 'Makati') {
+            console.log("Redirecting to condo.html...");
+            window.location.href = 'condo.html';
+
+        } else if (propertyType === 'condo' && city === 'Tugegarao') {
+            console.log("No matching property found.");
+            alert("No matching property found.");
+
+        } else if (propertyType === 'land' && city === 'Tugegarao') {
+            console.log("No matching property found.");
+            alert("No matching property found.");
+
+        } else if (propertyType === 'land' && city === 'Makati') {
+            console.log("No matching property found.");
+            alert("No matching property found.");
+        }
+
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+
+
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('https://wallpapers.com/images/hd/miniature-house-real-estate-agent-bxaazfpgcg3oh7it.jpg');
+    background-repeat: no-repeat;    
+
+}
+
+
+a:hover{
+    text-decoration: none;
+}
+
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer p {
+    margin-bottom: 0;
+  }
+  

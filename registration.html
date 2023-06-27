@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+  <!-- Bootstrap CSS link -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    body {
+      background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)), url('https://wallpapercave.com/wp/wp2464201.jpg')  ;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .container {
+      transform:translateY(20vh);
+      margin: auto;
+      background-color: #dfdede89;
+      border-radius: 10px;
+      padding: 40px;
+      color: #0000006f;
+    }
+    
+    h2 {
+      color: #000000;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    
+    label {
+      color: #000000;
+    }
+    
+    .form-control {
+      background-color: #fff;
+      color: #000;
+    }
+    
+    .btn-primary {
+      background-color: #ffdd00;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 class="mb-5" style="font-weight: 700;">Registration Form</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <form>
+          <div class="form-group">
+            <label for="name">First Name:</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+          </div>
+          <div class="form-group">
+            <label for="number">Phone Number:</label>
+            <input type="tel" class="form-control" id="phone_num" placeholder="Enter your phone number">
+          </div>
+
+          <div class="form-group">
+            <label for="university">University:</label>
+            <input type="text" class="form-control" id="university" placeholder="Enter your university">
+          </div>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <form>
+          <div class="form-group">
+            <label for="phone">Last Name:</label>
+            <input type="tel" class="form-control" id="lastNmae" placeholder="Enter your Last Name">
+          </div>
+          <div class="form-group">
+            <label for="role">I am a </label>
+            <select class="form-control" id="role">
+              <option value="student">Student </option>
+              <option value="agent">Buyer</option>
+              <option value="agent">Real Estate Agent</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="agency">Agency:</label>
+            <input type="text" class="form-control" id="agency" placeholder="Enter your agency">
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="input-group mb-3">
+        <a href="dashboard.html" class="btn btn-warning"  role="button">Register</a>
+         </div>
+
+         <div class="input-group"> 
+            <small>Skip Registration? <a href="dashboard.html" class="text-decoration-none">Click here</a></small> 
+            </div>
+
+  </div>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+  // Retrieve the form element
+  var form = document.querySelector('form');
+
+  // Add event listener to the form submission
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Get the input values
+    var firstName = document.getElementById('name').value;
+    var lastName = document.getElementById('lastName').value;
+    var phoneNumber = document.getElementById('phone_num').value;
+    var university = document.getElementById('university').value;
+    var role = document.getElementById('role').value;
+    var agency = document.getElementById('agency').value;
+
+    // Validate the input fields
+    if (firstName.trim() === '' || lastName.trim() === '' || phoneNumber.trim() === '' || university.trim() === '' || role.trim() === '' || agency.trim() === '') {
+      alert('Please fill in all the fields');
+      return;
+    }
+
+    // Create an object to store the user information
+    var userInfo = {
+      firstName: firstName,
+      lastName: lastName,
+      phoneNumber: phoneNumber,
+      university: university,
+      role: role,
+      agency: agency
+    };
+
+    // Store the user information in the local storage
+    localStorage.setItem('userInfo', JSON.stringify(userInfo));
+
+    // Redirect to the dashboard page
+    window.location.href = 'dashboard.html';
+  });
+});
+
+  </script>
+
+</body>
+</html>

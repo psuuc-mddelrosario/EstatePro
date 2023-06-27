@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Real Estate Property Details</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="dashboard.css">
+
+  <style>
+    .property-image {
+      width: 100%; /*Change object-fit value to 'contain' */ 
+      height: 400px;
+      object-fit: cover;
+    }
+
+    .carousel-item img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .overview-section {
+      margin-top: 40px;
+    }
+
+
+    .overview-section {
+      margin-top: 40px;
+    }
+
+    body{margin-top:20px;}
+
+    .amenity {
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+     <!--nav-->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="logo.png" alt="Logo" width="50">
+        <span class="text-warning">Estate</span>Pro
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="dashboard.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Properties</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="reservationlist.html">Appointment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="sell.html">Sell</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="agents.html">Agents</a>
+          </li>
+          <li class="nav-item">
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+              <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+            </form>
+          </li>
+
+          <li class="nav-item">
+            <div class="dropdown text-end">
+              <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="userr.png" alt="mdo" width="32" height="32" class="rounded-circle">
+              </a>
+              <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                <li>
+                  <a class="dropdown-item" href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="userr.png" width="32" height="32" class="rounded-circle">
+                    <a href="account settings.html" class=""> <center>Marie Del Rosario</center> </a>
+                  </a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li> <img src="" alt=""> <a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="index.html">Log out</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-5">
+    <div class=" row">
+        <button class="btn btn-light btn-sm " onclick="goBack()" >
+          <i class="fas fa-chevron-left"></i> Back
+        </button>
+        <h1 class=" ml-3 h3" style="line-height: normal; margin-top: 0;">Property Details</h1>
+      </div>
+      <hr>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div id="propertyCarousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#propertyCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#propertyCarousel" data-slide-to="1"></li>
+            <li data-target="#propertyCarousel" data-slide-to="2"></li>
+            <li data-target="#propertyCarousel" data-slide-to="3"></li>
+            <li data-target="#propertyCarousel" data-slide-to="4"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="s1.jpg" alt="Property Image 1" class="property-image img-fluid ">
+            </div>
+            <div class="carousel-item">
+              <img src="s2.jpeg" alt="Property Image 2" class="property-image img-fluid ">
+            </div>
+            <div class="carousel-item">
+              <img src="s3.jpg" alt="Property Image 3" class="property-image img-fluid ">
+            </div>
+            <div class="carousel-item">
+                <img src="s4.jpg" alt="Property Image 4" class="property-image img-fluid ">
+              </div>
+              <div class="carousel-item">
+               <img src="s5.jpg" alt="Property Image 5" class="property-image img-fluid ">
+             </div>
+          </div>
+          <a class="carousel-control-prev" href="#propertyCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#propertyCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="overview-section">
+          <h2 class="h3">Serene Haven House</h2>
+          <p class="text-justify">  <img src="loc.png" alt="" width="12rem"> Fairview, Quezon City</p>
+          <p class="text-justify">  <img src="phone-call (1).png" alt="" width="12rem"> +639 256 789 654</p>
+          <p class="text-justify">  <img src="email.png" alt="" width="15rem"> Karina Yu: <a href="#mailto"> Yukarina@gmail.com</a>  </p>
+          <h4>Php 17,190,250</h4> <br>
+          <button class="btn btn-primary" id="reserveButton" onclick="window.location.href = 'reservationform.html';">Appoint Now</button>
+          
+          
+         
+        </div>
+    </div>
+</div>
+</section>
+
+<section>
+   <div class="container">
+      <div class="overview-section">
+         <h3>Overview</h3>
+         <p class="text-justify">Serene Haven House is a stunning residential property located in the peaceful neighborhood of Fairview in Quezon City.
+             This exquisite house offers a serene and tranquil living environment, perfect for those seeking a calm retreat within the bustling city.</p>
+       </div>
+   </div>
+</section>
+
+<div class="container">
+   <h3 class="mt-4">Details</h3>
+
+   <table class="table table-bordered mt-4">
+     <tbody>
+       <tr>
+         <th>Car Spaces</th>
+         <td>3</td>
+       </tr>
+       <tr>
+         <th>Fully furnished</th>
+         <td>Yes</td>
+       </tr>
+       <tr>
+         <th>Bedrooms</th>
+         <td>4</td>
+       </tr>
+       <tr>
+         <th>Bathrooms</th>
+         <td>5</td>
+       </tr>
+       <tr>
+         <th>Rooms (total)</th>
+         <td>4</td>
+       </tr>
+       <tr>
+         <th>Floor area (m²)</th>
+         <td>900</td>
+       </tr>
+       <tr>
+         <th>Land Size (m²)</th>
+         <td>50</td>
+       </tr>
+     </tbody>
+   </table>
+ </div>
+
+
+<section class="section-big main-color mt-5 mb-5">
+   <div class="container">
+
+      <div class="row">
+         <div class="col-md-12 pb-20 text-center"> 
+            <h2 class="section-title mb-10"><span><strong class="primary-color">Amenities</strong> </span></h2>
+           <p class="section-sub-title">
+               Here are some desirable or useful facility of the building  <br>
+               
+            </p>
+                     <div class="row">
+                       <div class="col-md-4">
+                         <div class="amenity">
+                           <h2><i class="fas fa-swimming-pool"></i></h2>
+                           <p>Swimming Pool</p>
+                         </div>
+                       </div>
+                     
+                       <div class="col-md-4">
+                         <div class="amenity">
+                           <h2><i class="fas fa-dumbbell"></i></h2>
+                           <p>Gym</p>
+                         </div>
+                       </div>
+                     
+                       <div class="col-md-4">
+                        <div class="amenity">
+                          <h2><i class="fas fa-film"></i></h2>
+                          <p>Theater</p>
+                        </div>
+                      </div>
+                      
+                      <div class="col-md-4">
+                        <div class="amenity">
+                          <h2><i class="fas fa-wifi"></i></h2>
+                          <p>Internet</p>
+                        </div>
+                      </div>
+                      
+                      <div class="col-md-4">
+                        <div class="amenity">
+                          <h2><i class="fas fa-couch"></i></h2>
+                          <p>Balcony</p>
+                        </div>
+                      </div>
+                      
+                      <div class="col-md-4">
+                        <div class="amenity">
+                          <h2><i class="fas fa-car"></i></h2>
+                          <p>Parking Lot</p>
+                        </div>
+                      </div>
+                      
+                      <div class="col-md-4">
+                        <div class="amenity">
+                          <h2><i class="fas fa-tshirt"></i></h2>
+                          <p>Built-in Wardrobe</p>
+                        </div>
+                      </div>
+                      
+                      <div class="col-md-4">
+                        <div class="amenity">
+                          <h2><i class="fas fa-broom"></i></h2>
+                          <p>Maid's Room</p>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4">
+                        <div class="amenity">
+                          <h2><i class="fas fa-gamepad"></i></h2>
+                          <p>Gaming Area</p>
+                        </div>
+                      </div>
+      </section>
+   </div>
+</div>
+
+   <!--footer-->
+   <div class="b-example-divider "></div>
+   <div class="footer bg-black">
+     <div class="container">
+       <footer class="py-5">
+         <div class="row">
+           <div class="col-6 col-md-2 mb-3">
+             <h5>Links</h5>
+             <ul class="nav flex-column">
+               <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-warning">Home</a></li>
+               <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-warning">Properties</a></li>
+               <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-warning">Contact</a></li>
+               <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-warning">Profile</a></li>
+               <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-warning">About</a></li>
+             </ul>
+           </div>
+ 
+           <div class="col-6 col-md-2 mb-3">
+             <h5>Explore Homes</h5>
+             <ul class="nav flex-column">
+               <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-warning">House</a></li>
+               <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-warning">House and Lots</a></li>
+               <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-warning">Condominium</a></li>
+             </ul>
+           </div>
+ 
+           <div class="col-6 col-md-2 mb-3">
+             <h5>FAQs</h5>
+             <ul class="nav flex-column">
+               <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-warning">Homebuyer</a></li>
+               <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-warning">Homeowner</a></li>
+               <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-warning">Seller</a></li>
+             </ul>
+           </div>
+ 
+           <div class="col-md-5 offset-md-1 mb-3">
+             <form>
+               <h5 class="text-warning">Subscribe to our newsletter</h5>
+               <p class="mb-2">Monthly digest of what's new and exciting from us.</p>
+               <div class="d-flex flex-column flex-sm-row w-100 gap-3">
+                 <label for="newsletter1" class="visually-hidden"></label>
+                 <input id="newsletter1" type="text" class="form-control" style="margin-right: 2px;"
+                   placeholder="Email address">
+                 <button class="btn btn-primary" type="button">Subscribe</button>
+               </div>
+             </form>
+           </div>
+         </div>
+ 
+         <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+           <p class="text-white">&copy; 2023 EstatePro All rights reserved.</p>
+           <div class="ml-auto">
+             <a href="#" class="text-body-secondary me-3" style="margin-right: 5px;"><i class="fab fa-facebook-f"></i></a>
+             <a href="#" class="text-body-secondary me-3" style="margin-right: 5px;"><i class="fab fa-twitter"></i></a>
+             <a href="#" class="text-body-secondary me-3" style="margin-right: 5px;"><i
+                 class="fab fa-instagram"></i></a>
+             <a href="#" class="text-body-secondary me-3" style="margin-right: 5px;"><i
+                 class="fab fa-linkedin"></i></a>
+           </div>
+         </div>
+       </footer>
+                      
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script>
+    function goBack() {
+ window.location.href = "house1.html";}
+ </script>
+ 
+  
+</body>
+
+</html>

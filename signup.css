@@ -1,0 +1,75 @@
+
+
+body{
+
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0)),url('https://c0.wallpaperflare.com/preview/108/456/1011/white-and-brown-concrete-building.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.box-area{
+    width: 930px;
+}
+
+
+.right-box{
+    padding: 40px 30px 40px 40px;
+}
+
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+}
+::placeholder{
+    font-size: 16px;
+}
+
+.wrapper .login_with{
+    padding: 15px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
+
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer p {
+    margin-bottom: 0;
+  }
+  
+
+@media only screen and (max-width: 768px){
+
+    .box-area{
+        margin: 0 10px;
+
+    }
+
+    .left-box{
+        height: 100px;
+        overflow: hidden;
+
+    }
+    .right-box{
+        padding: 20px;
+
+    }
+   
+
+}
